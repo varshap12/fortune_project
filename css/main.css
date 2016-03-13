@@ -14,6 +14,7 @@ body {
 
 header {
   text-align: center;
+  overflow: hidden;
 }
 
 header span {
@@ -26,22 +27,26 @@ header h1 {
   margin: 5px auto;
 }
 
-header h1:before {
-  content:"";
-  border-top: 5px solid black;
+header h1 span {
   display: inline-block;
   position: relative;
-  bottom: 8px;
-  margin-right: 20px;
-  width: 43%;
 }
 
-header h1:after {
+header h1 span:before, header h1 span:after {
   content:"";
   border-top: 5px solid black;
-  display: inline-block;
-  position: relative;
-  bottom: 8px;
-  margin-left: 20px;
-  width: 43%;
+  display: block;
+  position: absolute;
+  top:20px;
+  width: 9999px;
+}
+
+header h1 span:before {
+  right: 100%;
+  margin-right: 10px;
+}
+
+header h1 span:after {
+  left: 100%;
+  margin-left: 10px;
 }
